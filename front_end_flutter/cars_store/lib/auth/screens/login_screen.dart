@@ -12,22 +12,47 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        //crossAxisAlignment: CrossAxisAlignment.center,
+        //mainAxisSize: MainAxisSize.max,
         children: [
 
           // ignore: prefer_const_constructors
-          Center(
-            child: Padding(
-              padding:  EdgeInsets.only(top: 50),
-              child: const Text(
-                'readyto.',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 40,
+         
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  color: Colors.black,
+                  width: 640,
+                  height: 844,
+                  child: Image.asset(
+                    'assets/images/bmw 520i.jpg',
+                    fit: BoxFit.cover,
+                    ),
+                  
+
                 ),
-              ),
-            ),
-            ),
+                SizedBox(
+                  
+
+                ),
+                Container(
+                  
+                  width: 640,
+                  height: 844,
+                  child:const Text(
+                   'readyto.',
+                   style: TextStyle(
+                     fontWeight: FontWeight.bold,
+                     fontSize: 40,
+                   ),
+                 ), 
+                ),
+                 
+                 
+              ],
+            )
 
             
         ],

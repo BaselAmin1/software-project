@@ -1,6 +1,7 @@
 import 'package:cars_store/data/web_services/web_sevices.dart';
 import 'package:cars_store/test_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'auth/screens/login_screen.dart';
 
@@ -15,11 +16,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+        return ScreenUtilInit(
+      designSize: const Size(390, 844),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+           debugShowCheckedModeBanner: false,
+         home: LoginScreen(),
+          );
+         
+      
+        
+      },
+    );
+
   
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
-    );
+     
+    
   }
 }
