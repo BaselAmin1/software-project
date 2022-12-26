@@ -5,10 +5,10 @@ class CarsWebServices {
 
   static init() {
     BaseOptions options = BaseOptions(
-      baseUrl:'http://10.0.2.2:4444/',
+      baseUrl: 'http://10.0.2.2:4444/',
       receiveDataWhenStatusError: true,
-      receiveTimeout: 20 * 1000,
-      connectTimeout: 20 * 1000,
+      //receiveTimeout: 20 * 1000,
+      // connectTimeout: 20000 * 1000,
     );
     dio = Dio(
       options,
@@ -17,11 +17,10 @@ class CarsWebServices {
 
   static Future<Response> getCars({
     Map<String, dynamic>? query,
-
   }) async {
-     dio.options.headers = {
-    //  "accept":"application/json"
-     // 'Content-Type': 'application/json',
+    dio.options.headers = {
+      //  "accept":"application/json"
+      // 'Content-Type': 'application/json',
     };
     return dio.get(
       'cars/3/',

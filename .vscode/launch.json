@@ -8,7 +8,9 @@
             "name": "cars_store",
             "cwd": "front_end_flutter\\cars_store",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": ["--web-port", "52465"]
+
         },
         {
             "name": "cars_store (profile mode)",
