@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import CarSerializer
-from .models import Car
+from .models import Bmw
 
 @api_view(['GET',])
 def getRoutes(request):
@@ -20,40 +20,40 @@ def getRoutes(request):
     return Response(routes)
 
 @api_view(['GET'])
-def getCars(request):
-    cars = Car.objects.all()
-    serializer = CarSerializer(cars, many=True)
+def getBmws(request):
+    bmw = Bmw.objects.all()
+    serializer = CarSerializer(bmw, many=True)
     return Response(serializer.data)
 
 
 @api_view(['GET'])
-def getCar(request,pk):
-    car = Car.objects.get(id=pk)
-    serializer = CarSerializer(car, many=False)
+def getBmw(request,pk):
+    bmw = Bmw.objects.get(id=pk)
+    serializer = CarSerializer(bmw, many=False)
     return Response(serializer.data)
 
 @api_view(['POST'])
-def addCar(request):
+def addBmw(request):
     data =request.data
-    car =Car.objects.create(
+    bmw =Bmw.objects.create(
         body =data['body']
     )
-    serializer=CarSerializer(car,many=False)
+    serializer=CarSerializer(bmw,many=False)
     return Response(serializer.data)
 
 @api_view(['PUT'])
-def updateCar(request,pk):
+def updateBmw(request,pk):
 
-    car =Car.objects.get(id=pk)
-    serializer=CarSerializer(car,data=request.data)
+    bmw =Bmw.objects.get(id=pk)
+    serializer=CarSerializer(bmw,data=request.data)
     if serializer.is_valid():
         serializer.save()
     return Response(serializer.data)
 
 
 @api_view(['DELETE'])
-def deleteCar(request,pk):
-    car = Car.objects.get(id=pk)
-    car.delete()
+def deleteBmw(request,pk):
+    bmw = Bmw.objects.get(id=pk)
+    bmw.delete()
     return Response('car was deleted.')
 
