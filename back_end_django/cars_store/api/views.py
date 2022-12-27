@@ -1,7 +1,8 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import CarSerializer
-from .models import Bmw
+from django.contrib.auth.forms import UserCreationForm
+from .serializers import CarSerializer,UserSerializer
+from .models import Bmw,User
 
 @api_view(['GET',])
 def getRoutes(request):
@@ -18,6 +19,15 @@ def getRoutes(request):
         }
     ]
     return Response(routes)
+@api_view(['POST'])
+def signup(request):
+    form=UserCreationForm()
+    data={'form':form}
+    user =User.objects.create(
+        body =data['body']
+    )
+    serializer=UserSerializer(user,many=False)
+    return Response(serializer.data)
 
 @api_view(['GET'])
 def getBmws(request):
