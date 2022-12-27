@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns =[
     path('',views.getRoutes),
+    path('signup/',views.signup),
     path('bmws/',views.getBmws),
     path('bmw/create/',views.addBmw),
     path('bmw/<pk>/',views.getBmw),
