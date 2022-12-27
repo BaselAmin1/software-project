@@ -40,8 +40,6 @@ Widget DefaultTextFormField({
           prefixIcon,
         ),
         
-        suffixIcon: suffixIcon != null
-            ? IconButton(onPressed: suffixPressed, icon: Icon(suffixIcon))
-            : null,
+        
       ),
     );
