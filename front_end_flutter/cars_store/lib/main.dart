@@ -1,5 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:cars_store/auth/screens/login_screen.dart';
+import 'package:cars_store/cars/screens/bmw_screen.dart';
 import 'package:cars_store/data/web_services/web_sevices.dart';
+import 'package:cars_store/layouts/cars_layout.dart';
 import 'package:cars_store/test_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,7 +28,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
            debugShowCheckedModeBanner: false,
-         home: LoginScreen(),
+         home: CarsLayout(),
           );
          
       
