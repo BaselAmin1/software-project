@@ -1,10 +1,13 @@
-import 'package:cars_store/features/cars/screens/audi_screen.dart';
-import 'package:cars_store/features/cars/screens/bmw_screen.dart';
-import 'package:cars_store/features/cars/screens/chevrolet_screen.dart';
-import 'package:cars_store/features/cars/screens/ford_screen.dart';
-import 'package:cars_store/features/cars/screens/jeep_screen.dart';
-import 'package:cars_store/features/cars/screens/mercedes_screen.dart';
-import 'package:cars_store/features/cars/screens/skoda_screen.dart';
+import 'package:cars_store/features/cars/business_logic/cubit/cars_cubit.dart';
+import 'package:cars_store/features/cars/data/repository/cars_repository.dart';
+import 'package:cars_store/features/cars/data/web_sevices/cars_web_services.dart';
+import 'package:cars_store/features/cars/presentation/screens/audi_screen.dart';
+import 'package:cars_store/features/cars/presentation/screens/bmw_screen.dart';
+import 'package:cars_store/features/cars/presentation/screens/chevrolet_screen.dart';
+import 'package:cars_store/features/cars/presentation/screens/ford_screen.dart';
+import 'package:cars_store/features/cars/presentation/screens/jeep_screen.dart';
+import 'package:cars_store/features/cars/presentation/screens/mercedes_screen.dart';
+import 'package:cars_store/features/cars/presentation/screens/skoda_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,7 +24,10 @@ class AppCubit extends Cubit<AppCubitStates> {
   }
 
   List<Widget> Screens = [
-    BmwScreen(),
+    BlocProvider(
+      create: (context) => CarsCubit(CarsRepository(CarsWebServices())),
+      child: BmwScreen(),
+    ),
     MercedesScreen(),
     JeeptScreen(),
     AudiScreen(),
