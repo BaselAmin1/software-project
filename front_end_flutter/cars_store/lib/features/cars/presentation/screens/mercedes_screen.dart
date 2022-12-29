@@ -1,3 +1,4 @@
+import 'package:cars_store/features/cars/presentation/widgets/build_cars.dart';
 import 'package:flutter/material.dart';
 
 class MercedesScreen extends StatelessWidget {
@@ -5,6 +6,10 @@ class MercedesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return BuildCars(
+      carName: 'sefse',
+      carPrice: '89988',
+      carImage: Image.asset('assets/images/bmw_4series.jpg'),
+    );
   }
 }

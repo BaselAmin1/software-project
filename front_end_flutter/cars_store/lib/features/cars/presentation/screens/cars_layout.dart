@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:cars_store/app_logic/cubit/app_cubit_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,7 +24,9 @@ class _CarsLayoutState extends State<CarsLayout> {
           return Scaffold(
             body: Row(
               children: [
+
                 NavigationRail(
+                  backgroundColor: Color.fromRGBO(245, 245, 245, 0),
                   selectedIconTheme: IconThemeData(color: Colors.black),
                   indicatorColor: Colors.black,
                   labelType: NavigationRailLabelType.all,
@@ -99,7 +103,6 @@ class _CarsLayoutState extends State<CarsLayout> {
                           style: TextStyle(
                               fontSize: 20.sp, fontWeight: FontWeight.bold),
                         )),
-
                     NavigationRailDestination(
                         icon: Visibility(
                           visible: false,
@@ -114,8 +117,72 @@ class _CarsLayoutState extends State<CarsLayout> {
                   ],
                 ),
                 Expanded(
-                    child: AppCubit.get(context)
-                        .Screens[AppCubit.get(context).selectedIndex])
+                  
+                   
+             
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                       Padding(
+                         padding:  EdgeInsets.only(left: 20.w,top: 20.h),
+                         child: Text('readyto.',
+                  style: TextStyle(
+                    fontSize: 37.sp,
+                    fontWeight: FontWeight.bold
+                  ),
+
+               ),
+                       ),
+                       SizedBox(
+                        width: 200.w,
+                       ),
+                       Padding(
+                         padding:  EdgeInsets.only(top: 15.h),
+                         child: IconButton(onPressed: (){}
+                         , icon: Icon(
+                          Icons.person_outlined
+                         )
+                         ),
+                       ),
+                       Padding(
+                         padding:  EdgeInsets.only(top:15.h ),
+                         child: Text('My account',
+                         style: TextStyle(
+                          fontSize: 15.sp,
+                         ),
+                         ),
+                       ),
+                        Padding(
+                         padding:  EdgeInsets.only(top: 15.h),
+                         child: IconButton(onPressed: (){}
+                         , icon: Icon(
+                          Icons.favorite_outline,
+                         )
+                         ),
+                       ),
+                       Padding(
+                         padding:  EdgeInsets.only(top:15.h ),
+                         child: Text('Favourites',
+                         style: TextStyle(
+                          fontSize: 15.sp,
+                         ),
+                         ),
+                       ),
+                       
+               
+
+                    ],
+                  ),
+                 
+                
+                Expanded(child: AppCubit.get(context).Screens[AppCubit.get(context).selectedIndex])
+                ],
+              ),
+              
+                ),
+             
               ],
             ),
           );

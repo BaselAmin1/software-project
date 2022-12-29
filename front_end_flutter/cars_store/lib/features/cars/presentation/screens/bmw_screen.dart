@@ -26,14 +26,10 @@ class BmwScreen extends StatelessWidget {
          cubit.getAllCharacters('/bmws');
           print(cubit.carsList);
         return Scaffold(
-          
           body: BuildCars(
-            firstRowOfCarsName: '2 Series',
-            firstRowOfCarsPrice: '800,000',
-            firstRowOfCarsImage: Image.asset('assets/images/bmw_2series.jpg'),
-            secondRowOfCarsName: '4 Series',
-            secondRowOfCarsPrice: '1,200,000',
-            secondRowOfCarsImage: Image.asset('assets/images/bmw_4series.jpg'),
+            carName: '2 Series',
+            carPrice: '800,000',
+            carImage: Image.asset('assets/images/bmw_2series.jpg'),
           ),
         );
       },
