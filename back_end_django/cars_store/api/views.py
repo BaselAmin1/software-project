@@ -24,7 +24,7 @@ def signup(request):
     form=UserCreationForm()
     data={'form':form}
     user =User.objects.create(
-        body =data['body']
+        body =data['body'] 
     )
     serializer=UserSerializer(user,many=False)
     return Response(serializer.data)

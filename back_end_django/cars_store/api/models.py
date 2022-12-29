@@ -4,6 +4,7 @@ from django.db import models
 class Bmw(models.Model):
     model =models.TextField()
     price =models.TextField()
+    caption =models.TextField(default='some_value')
     availabilty=models.BooleanField(default= True)
     image = models.ImageField(null=True,blank=True,upload_to="images/")
     updated =models.DateTimeField(auto_now=True)
