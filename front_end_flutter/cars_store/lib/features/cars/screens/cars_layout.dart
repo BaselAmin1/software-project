@@ -24,12 +24,12 @@ class _CarsLayoutState extends State<CarsLayout> {
               children: [
                 NavigationRail(
                   selectedIconTheme: IconThemeData(color: Colors.black),
-                 indicatorColor: Colors.black,
+                  indicatorColor: Colors.black,
                   labelType: NavigationRailLabelType.all,
                   selectedIndex: AppCubit.get(context).selectedIndex,
-                   onDestinationSelected: (index) {
+                  onDestinationSelected: (index) {
                     AppCubit.get(context).changeNavigationRail(index);
-                   },
+                  },
                   // ignore: prefer_const_literals_to_create_immutables
                   destinations: [
                     // ignore: prefer_const_constructors
@@ -43,9 +43,8 @@ class _CarsLayoutState extends State<CarsLayout> {
                           'BMW',
                           style: TextStyle(
                               fontSize: 20.sp, fontWeight: FontWeight.bold),
-                        )
-                        ),
-                     NavigationRailDestination(
+                        )),
+                    NavigationRailDestination(
                         icon: Visibility(
                           visible: false,
                           child: Icon(Icons.home),
@@ -55,9 +54,8 @@ class _CarsLayoutState extends State<CarsLayout> {
                           'Mercedes',
                           style: TextStyle(
                               fontSize: 20.sp, fontWeight: FontWeight.bold),
-                        )
-                        ),
-                         NavigationRailDestination(
+                        )),
+                    NavigationRailDestination(
                         icon: Visibility(
                           visible: false,
                           child: Icon(Icons.home),
@@ -67,9 +65,8 @@ class _CarsLayoutState extends State<CarsLayout> {
                           'Jeep',
                           style: TextStyle(
                               fontSize: 20.sp, fontWeight: FontWeight.bold),
-                        )
-                        ),
-                         NavigationRailDestination(
+                        )),
+                    NavigationRailDestination(
                         icon: Visibility(
                           visible: false,
                           child: Icon(Icons.home),
@@ -79,9 +76,8 @@ class _CarsLayoutState extends State<CarsLayout> {
                           'Audi',
                           style: TextStyle(
                               fontSize: 20.sp, fontWeight: FontWeight.bold),
-                        )
-                        ),
-                         NavigationRailDestination(
+                        )),
+                    NavigationRailDestination(
                         icon: Visibility(
                           visible: false,
                           child: Icon(Icons.home),
@@ -91,9 +87,8 @@ class _CarsLayoutState extends State<CarsLayout> {
                           'Skoda',
                           style: TextStyle(
                               fontSize: 20.sp, fontWeight: FontWeight.bold),
-                        )
-                        ),
-                         NavigationRailDestination(
+                        )),
+                    NavigationRailDestination(
                         icon: Visibility(
                           visible: false,
                           child: Icon(Icons.home),
@@ -103,10 +98,9 @@ class _CarsLayoutState extends State<CarsLayout> {
                           'Chevrolet',
                           style: TextStyle(
                               fontSize: 20.sp, fontWeight: FontWeight.bold),
-                        )
-                        ),
-                         
-                         NavigationRailDestination(
+                        )),
+
+                    NavigationRailDestination(
                         icon: Visibility(
                           visible: false,
                           child: Icon(Icons.home),
@@ -116,13 +110,12 @@ class _CarsLayoutState extends State<CarsLayout> {
                           'Ford',
                           style: TextStyle(
                               fontSize: 20.sp, fontWeight: FontWeight.bold),
-                        )
-                        ),
+                        )),
                   ],
                 ),
                 Expanded(
-                  child: AppCubit.get(context).Screens[AppCubit.get(context).selectedIndex]
-                )
+                    child: AppCubit.get(context)
+                        .Screens[AppCubit.get(context).selectedIndex])
               ],
             ),
           );

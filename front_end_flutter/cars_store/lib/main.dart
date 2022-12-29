@@ -1,19 +1,9 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'package:cars_store/auth/screens/login_screen.dart';
-import 'package:cars_store/cars/screens/bmw_screen.dart';
-import 'package:cars_store/data/web_services/web_sevices.dart';
-import 'package:cars_store/layouts/cars_layout.dart';
-import 'package:cars_store/test_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'features/cars/screens/cars_layout.dart';
 
-import 'auth/screens/register_screen.dart';
-
-void main() async{
-CarsWebServices.init();
-  runApp(const MyApp()
-  );
+void main() async {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,24 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        return ScreenUtilInit(
+    return ScreenUtilInit(
       designSize: const Size(390, 844),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
-           debugShowCheckedModeBanner: false,
-         home: CarsLayout(),
-          );
-         
-      
-        
+          debugShowCheckedModeBanner: false,
+          home: CarsLayout(),
+        );
       },
     );
-
-  
-
-     
-    
   }
 }

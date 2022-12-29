@@ -1,9 +1,7 @@
-
-
 import 'package:flutter/material.dart';
 
-class AudiScreen extends StatelessWidget {
-  const AudiScreen({super.key});
+class ChevroletScreen extends StatelessWidget {
+  const ChevroletScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

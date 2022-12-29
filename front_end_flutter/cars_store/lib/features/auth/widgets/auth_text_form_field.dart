@@ -11,10 +11,9 @@ class AuthTextFormField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 90),
       child: TextFormField(
-        
         decoration: InputDecoration(
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(2.r))
-        ),
+            border:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(2.r))),
       ),
     );
   }

@@ -23,7 +23,6 @@ Widget DefaultTextFormField({
       obscureText: isPassword,
       textAlign: TextAlign.start,
       onFieldSubmitted: onSubmit,
-    
       onChanged: onChange,
       onTap: onTap,
       validator: validation,
@@ -39,7 +38,5 @@ Widget DefaultTextFormField({
         prefixIcon: Icon(
           prefixIcon,
         ),
-        
-        
       ),
     );

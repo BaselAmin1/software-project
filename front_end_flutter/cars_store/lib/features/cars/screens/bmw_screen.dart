@@ -1,4 +1,4 @@
-import 'package:cars_store/cars/widgets/build_cars.dart';
+import 'package:cars_store/features/cars/widgets/build_cars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -17,9 +17,7 @@ class BmwScreen extends StatelessWidget {
         secondRowOfCarsName: '4 Series',
         secondRowOfCarsPrice: '1,200,000',
         secondRowOfCarsImage: Image.asset('assets/images/bmw_4series.jpg'),
-      
       ),
     );
   }
 }
-
