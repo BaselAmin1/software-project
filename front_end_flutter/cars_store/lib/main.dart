@@ -1,4 +1,5 @@
 import 'package:cars_store/features/auth/screens/login_screen.dart';
+import 'package:cars_store/features/auth/screens/register_screen.dart';
 import 'package:cars_store/features/cars/data/web_sevices/cars_web_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: CarsLayout(),
+          home: RegisterScreen(),
         );
       },
     );
