@@ -1,5 +1,12 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'dart:ui';
+
+import 'package:cars_store/features/auth/screens/login_screen.dart';
 import 'package:cars_store/features/auth/widgets/auth_text_form_field.dart';
 import 'package:cars_store/features/auth/widgets/build_bottom_button_.dart';
+import 'package:cars_store/features/auth/widgets/login_with_builder.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -50,7 +57,7 @@ class RegisterScreen extends StatelessWidget {
                       Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 102.h),
+                            padding: EdgeInsets.only(left: 27.w),
                             child: Text(
                               'Get started',
                               style: TextStyle(
@@ -72,7 +79,7 @@ class RegisterScreen extends StatelessWidget {
                             child: Text(
                               'Login',
                               style: TextStyle(
-                                  color: Colors.blue, fontSize: 18.sp),
+                                  color: Color.fromRGBO(29, 78, 216, 1), fontSize: 18.sp),
                             ),
                           ),
                         ],
@@ -80,7 +87,7 @@ class RegisterScreen extends StatelessWidget {
                       Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 32.w),
+                            padding: EdgeInsets.only(left: 27.w),
                             child: Text(
                               'First Name',
                               style: TextStyle(fontSize: 18.sp),
@@ -104,16 +111,19 @@ class RegisterScreen extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: AuthTextFormField(),
+                            child: AuthTextFormField(
+                              hintText: 'Entert your First Name ',
+                            ),
                           ),
                           SizedBox(
                             width: 17.w,
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.only(right: 80),
+                              padding:  EdgeInsets.only(right: 24.w),
                               child: TextFormField(
                                 decoration: InputDecoration(
+                                  hintText: 'Enter your Last Name ',
                                     border: OutlineInputBorder(
                                         borderRadius:
                                             BorderRadius.circular(2.r))),
@@ -126,7 +136,7 @@ class RegisterScreen extends StatelessWidget {
                         height: 25.h,
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 90.sp),
+                        padding: EdgeInsets.only(left: 27.w),
                         child: Text(
                           'Email Address',
                           style: TextStyle(fontSize: 18.sp),
@@ -136,14 +146,16 @@ class RegisterScreen extends StatelessWidget {
                         height: 8.h,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 80),
-                        child: AuthTextFormField(),
+                        padding:  EdgeInsets.only(right: 24.w),
+                        child: AuthTextFormField(
+                          hintText: 'Enter your Email',
+                        ),
                       ),
                       SizedBox(
                         height: 25.h,
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 90.sp),
+                        padding: EdgeInsets.only(left: 27.w),
                         child: Text(
                           'Password',
                           style: TextStyle(fontSize: 18.sp),
@@ -153,16 +165,18 @@ class RegisterScreen extends StatelessWidget {
                         height: 8.h,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 80),
-                        child: AuthTextFormField(),
+                        padding:  EdgeInsets.only(right: 24.w),
+                        child: AuthTextFormField(
+                          hintText: 'Enter your Password',
+                        ),
                       ),
                       SizedBox(
                         height: 25.h,
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 90.sp),
+                        padding: EdgeInsets.only(left: 27.w),
                         child: Text(
-                          'Serial Number',
+                          'Phone Number',
                           style: TextStyle(fontSize: 18.sp),
                         ),
                       ),
@@ -170,16 +184,51 @@ class RegisterScreen extends StatelessWidget {
                         height: 8.h,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 80),
-                        child: AuthTextFormField(),
+                        padding:  EdgeInsets.only(right: 24.w),
+                        child: AuthTextFormField(
+                          hintText: 'Enter your Phone Number',
+
+                        ),
                       ),
                       SizedBox(
-                        height: 72.h,
+                        
+                    height:25.h ,
+                      ),
+                      Row(
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Padding(
+                            padding:  EdgeInsets.only(left:27.w ),
+                            child: Icon(
+                              Icons.check_box,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          Text(
+                            'I agree to the Terms of Service & Privacy Policy*',
+                            style: TextStyle(
+                              fontSize: 17.sp,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            ),
+
+                        ],
+                      ),
+                      SizedBox(
+                        height: 6.h,
                       ),
                       BuildBottomButton(
-                        onPrised: () {},
+                        onPrised: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen(),
+                          )
+                          );
+                        },
                         childText: 'Register',
-                      )
+                      ),
+                      SizedBox(
+                        height: 45.h,
+                      ),
+                      LoginWithBuilder(),
                     ],
                   ),
                 ),
@@ -191,3 +240,4 @@ class RegisterScreen extends StatelessWidget {
     );
   }
 }
+

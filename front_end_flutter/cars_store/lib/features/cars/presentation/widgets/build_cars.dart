@@ -13,7 +13,7 @@ final Image carImage;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 60.w, top: 128.h),
+      padding: EdgeInsets.only(left: 60.w, top: 108.h),
       child: Container(
         width: 290.w,
         height: 624.h,
@@ -72,6 +72,10 @@ final Image carImage;
                                     fontWeight: FontWeight.w600),
                               ),
                             ),
+                            SizedBox(
+                              width: 15.w,
+                            ),
+                            Image.asset('assets/images/trend.png')
                           ],
                         ),
                        carImage

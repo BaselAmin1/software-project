@@ -18,12 +18,12 @@ class _build_bottomState extends State<BuildBottomButton> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.only(left: 25.w, top: 30.h, right: 25.w),
+        padding: EdgeInsets.only(left: 28.w, top: 30.h, right: 22.w),
         child: Container(
           height: 50.h,
           width: 342.w,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5), color: Colors.blue),
+              borderRadius: BorderRadius.circular(5), color: Color.fromRGBO(29, 78, 216, 1)),
           child: MaterialButton(
             onPressed: () => widget.onPrised(),
             child: Text(

@@ -123,57 +123,94 @@ class _CarsLayoutState extends State<CarsLayout> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                       Padding(
-                         padding:  EdgeInsets.only(left: 20.w,top: 20.h),
-                         child: Text('readyto.',
-                  style: TextStyle(
-                    fontSize: 37.sp,
-                    fontWeight: FontWeight.bold
-                  ),
+                      Row(
+                        children: [
+                           Padding(
+                             padding:  EdgeInsets.only(left: 20.w,top: 20.h),
+                             child: Text('readyto.',
+                      style: TextStyle(
+                        fontSize: 37.sp,
+                        fontWeight: FontWeight.bold
+                      ),
 
                ),
-                       ),
-                       SizedBox(
-                        width: 200.w,
-                       ),
-                       Padding(
-                         padding:  EdgeInsets.only(top: 15.h),
-                         child: IconButton(onPressed: (){}
-                         , icon: Icon(
-                          Icons.person_outlined
-                         )
-                         ),
-                       ),
-                       Padding(
-                         padding:  EdgeInsets.only(top:15.h ),
-                         child: Text('My account',
-                         style: TextStyle(
-                          fontSize: 15.sp,
-                         ),
-                         ),
-                       ),
-                        Padding(
-                         padding:  EdgeInsets.only(top: 15.h),
-                         child: IconButton(onPressed: (){}
-                         , icon: Icon(
-                          Icons.favorite_outline,
-                         )
-                         ),
-                       ),
-                       Padding(
-                         padding:  EdgeInsets.only(top:15.h ),
-                         child: Text('Favourites',
-                         style: TextStyle(
-                          fontSize: 15.sp,
-                         ),
-                         ),
-                       ),
-                       
+                           ),
+                           SizedBox(
+                            width: 200.w,
+                           ),
+                           Padding(
+                             padding:  EdgeInsets.only(top: 15.h),
+                             child: IconButton(onPressed: (){}
+                             , icon: Icon(
+                              Icons.person_outlined
+                             )
+                             ),
+                           ),
+                           Padding(
+                             padding:  EdgeInsets.only(top:15.h ),
+                             child: Text('My account',
+                             style: TextStyle(
+                              fontSize: 15.sp,
+                             ),
+                             ),
+                           ),
+                            Padding(
+                             padding:  EdgeInsets.only(top: 15.h),
+                             child: IconButton(onPressed: (){}
+                             , icon: Icon(
+                              Icons.favorite_outline,
+                             )
+                             ),
+                           ),
+                           Padding(
+                             padding:  EdgeInsets.only(top:15.h ),
+                             child: Text('Favourites',
+                             style: TextStyle(
+                              fontSize: 15.sp,
+                             ),
+                             ),
+                           ),
+                          
+                           
                
 
-                    ],
+                        ],
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.only(right: 20.w),
+                        child: Container(
+                          // ignore: sort_child_properties_last
+                          child: Row(
+                            // ignore: prefer_const_literals_to_create_immutables
+                            children: [
+                              Padding(
+                                padding:  EdgeInsets.only(left: 10.w),
+                                child: Icon(
+                                  Icons.search_outlined,
+                                ),
+                              ),
+                              Text(
+                                'Search for Cars',
+                                style: TextStyle(
+                                  fontSize: 15.sp
+                                ),
+                              ),
+                            ],
+                          ),
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(243, 244, 246, 1),
+                            borderRadius: BorderRadius.circular(20.r)
+                          ),
+                        width: 70.w,
+                        height: 30.h,
+                        
+                ),
+                      )
+                     
+                     ],
                   ),
                  
                 
