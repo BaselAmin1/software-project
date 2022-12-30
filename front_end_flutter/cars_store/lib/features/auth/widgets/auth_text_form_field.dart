@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AuthTextFormField extends StatelessWidget {
-  const AuthTextFormField({
+   AuthTextFormField({
    
     Key? key, required this.hintText,
+     this.suffix,
   }) : super(key: key);
   final String hintText;
+  final Widget? suffix;
 
 
   @override
@@ -17,6 +19,7 @@ class AuthTextFormField extends StatelessWidget {
         
         decoration: InputDecoration(
           hintText: hintText,
+          suffixIcon: suffix,
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(2.r))),
       ),

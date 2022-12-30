@@ -3,13 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BuildBottomButton extends StatefulWidget {
   const BuildBottomButton({
+    
     required this.childText,
     required this.onPrised,
-    Key? key,
+    Key? key, 
   }) : super(key: key);
   final Function onPrised;
   final String childText;
-
+ 
   @override
   State<BuildBottomButton> createState() => _build_bottomState();
 }

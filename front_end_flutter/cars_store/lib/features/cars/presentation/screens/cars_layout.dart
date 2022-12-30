@@ -180,7 +180,7 @@ class _CarsLayoutState extends State<CarsLayout> {
                         ],
                       ),
                       Padding(
-                        padding:  EdgeInsets.only(right: 20.w),
+                        padding:  EdgeInsets.only(top: 30.h,right: 20.w),
                         child: Container(
                           // ignore: sort_child_properties_last
                           child: Row(

@@ -69,6 +69,7 @@ class LoginScreen extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(right: 20.w),
                         child: AuthTextFormField(
+           
                           hintText: 'Enter Your Email',
                         ),
                       ),
