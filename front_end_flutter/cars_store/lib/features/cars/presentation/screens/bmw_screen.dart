@@ -1,5 +1,6 @@
 import 'package:cars_store/app_logic/cubit/app_cubit_cubit.dart';
 import 'package:cars_store/features/cars/business_logic/cubit/cars_cubit.dart';
+import 'package:cars_store/features/cars/data/models/cars_model.dart';
 import 'package:cars_store/features/cars/data/repository/cars_repository.dart';
 import 'package:cars_store/features/cars/data/web_sevices/cars_web_services.dart';
 import 'package:cars_store/features/cars/presentation/widgets/build_cars.dart';
@@ -10,28 +11,35 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BmwScreen extends StatelessWidget {
-  const BmwScreen({super.key});
+  BmwScreen({super.key});
+   List<Cars>? AllCars=[];
 
   @override
   Widget build(BuildContext context) {
     var cubit = CarsCubit.get(context);
     return BlocConsumer<CarsCubit, CarsState>(
+      
       listener: (context, state) {
+        
         if (state is AppCubitInitial) {
-          cubit.getAllCharacters('/bmws');
-         
+          cubit.getAllCars('/bmws');
+        }
+        if (state is CarsLoaded) {
+          AllCars = (state).cars;
         }
       },
       builder: (context, state) {
-         cubit.getAllCharacters('/bmws');
-          print(cubit.carsList);
-        return Scaffold(
-          body: BuildCars(
-            carName: '2 Series',
-            carPrice: '800,000',
-            carImage: Image.asset('assets/images/bmw_2series.jpg'),
-          ),
-        );
+        cubit.getAllCars('/bmws');
+        print(cubit.carsList);
+        if (AllCars == null) {
+          return CircularProgressIndicator();
+        } else {
+          return Scaffold(
+            body: BuildCars(
+              cars: AllCars!,
+            ),
+          );
+        }
       },
     );
   }

@@ -13,7 +13,7 @@ class CarsCubit extends Cubit<CarsState> {
 
   CarsCubit(this.carsRepository) : super(CarsInitial());
 
-  List<Cars> getAllCharacters(String cars) {
+  List<Cars> getAllCars(String cars) {
     try {
       carsRepository.getAllCars(cars).then((cars) {
         emit(CarsLoaded(carsList));

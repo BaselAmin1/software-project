@@ -6,7 +6,7 @@ abstract class CarsState {}
 class CarsInitial extends CarsState {}
 
 class CarsLoaded extends CarsState {
-  final List<Cars> characters;
+  final List<Cars> cars;
 
-  CarsLoaded(this.characters);
+  CarsLoaded(this.cars);
 }

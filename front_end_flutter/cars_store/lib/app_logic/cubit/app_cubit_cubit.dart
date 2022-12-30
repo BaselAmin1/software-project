@@ -28,11 +28,11 @@ class AppCubit extends Cubit<AppCubitStates> {
       create: (context) => CarsCubit(CarsRepository(CarsWebServices())),
       child: BmwScreen(),
     ),
-    MercedesScreen(),
+    //MercedesScreen(),
     JeeptScreen(),
     AudiScreen(),
     SkodaScreen(),
-    ChevroletScreen(),
+   //ChevroletScreen(),
     FordScreen(),
   ];
 }
