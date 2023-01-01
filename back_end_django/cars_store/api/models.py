@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Bmw(models.Model):
+    maker =models.TextField(default='BMW')
     model =models.TextField()
     price =models.TextField()
     caption =models.TextField()
@@ -16,6 +17,7 @@ class Bmw(models.Model):
         ordering =['-updated',]
 
 class Porsche(models.Model):
+    maker =models.TextField(default='PORSCHE')
     model =models.TextField()
     price =models.TextField()
     caption =models.TextField()
@@ -30,6 +32,7 @@ class Porsche(models.Model):
         ordering =['-updated',]
 
 class Ferrari(models.Model):
+    maker =models.TextField(default='FERRARI')
     model =models.TextField()
     price =models.TextField()
     caption =models.TextField()
@@ -44,6 +47,7 @@ class Ferrari(models.Model):
         ordering =['-updated',]
 
 class Ford(models.Model):
+    maker =models.TextField(default='FORD')
     model =models.TextField()
     price =models.TextField()
     caption =models.TextField()
@@ -58,6 +62,7 @@ class Ford(models.Model):
         ordering =['-updated',]
 
 class Donkey(models.Model):
+    maker =models.TextField(default='DONKEY')
     model =models.TextField()
     price =models.TextField()
     caption =models.TextField()

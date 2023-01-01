@@ -11,7 +11,6 @@ import 'features/cars/presentation/screens/cars_layout.dart';
 
 void main() async {
   runApp(const MyApp());
-  
 }
 
 class MyApp extends StatelessWidget {
@@ -25,11 +24,9 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
-          theme: ThemeData(
-            primarySwatch: Colors.grey
-          ),
+          theme: ThemeData(primarySwatch: Colors.grey),
           debugShowCheckedModeBanner: false,
-          home: RegisterScreen(),
+          home: CarsLayout(),
         );
       },
     );
