@@ -12,13 +12,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BuildCars extends StatelessWidget {
-   BuildCars({
+  BuildCars({
     Key? key,
     required this.cars,
-    
   }) : super(key: key);
   final List<Cars> cars;
-
 
   @override
   Widget build(BuildContext context) {
@@ -106,10 +104,15 @@ class BuildCars extends StatelessWidget {
                                           fontWeight: FontWeight.w600),
                                     ),
                                   ),
-                                  SizedBox(
-                                    width: 15.w,
-                                  ),
-                                  Image.asset('assets/images/trend.png')
+                                  // SizedBox(
+                                  //   width: 3.w,
+                                  // ),
+                                  Spacer(),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 16.0),
+                                    child:
+                                        Image.asset('assets/images/trend.png'),
+                                  )
                                 ],
                               ),
                               Image.asset(

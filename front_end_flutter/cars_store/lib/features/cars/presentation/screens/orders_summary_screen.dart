@@ -207,7 +207,7 @@ class OrderSummary extends StatelessWidget {
                                       Padding(
                                         padding: EdgeInsets.only(left: 77.w),
                                         child: Text(
-                                          '3520',
+                                          car!.price! + ' \$',
                                           style: TextStyle(fontSize: 18.sp),
                                         ),
                                       ),
@@ -230,7 +230,7 @@ class OrderSummary extends StatelessWidget {
                                       Padding(
                                         padding: EdgeInsets.only(left: 55.w),
                                         child: Text(
-                                          '2900',
+                                          car!.price! + ' \$',
                                           style: TextStyle(
                                               fontSize: 20.sp,
                                               fontWeight: FontWeight.bold),

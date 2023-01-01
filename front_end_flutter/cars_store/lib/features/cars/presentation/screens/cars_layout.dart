@@ -27,104 +27,106 @@ class _CarsLayoutState extends State<CarsLayout> {
                 Expanded(
                   child: Row(
                     children: [
-                      NavigationRail(
-                        backgroundColor: Color.fromRGBO(245, 245, 245, 0),
-                        selectedIconTheme: IconThemeData(color: Colors.black),
-                        indicatorColor: Colors.black,
-                        labelType: NavigationRailLabelType.all,
-                        selectedIndex: AppCubit.get(context).selectedIndex,
-                        onDestinationSelected: (index) {
-                          AppCubit.get(context).changeNavigationRail(index);
-                        },
-                        // ignore: prefer_const_literals_to_create_immutables
-                        destinations: [
-                          // ignore: prefer_const_constructors
-                          NavigationRailDestination(
-                              icon: Visibility(
-                                visible: false,
-                                child: Icon(Icons.home),
-                              ),
-                              // ignore: prefer_const_constructors
-                              label: Text(
-                                'BMW',
-                                style: TextStyle(
-                                    fontSize: 20.sp,
-                                    fontWeight: FontWeight.bold),
-                              )),
-                          NavigationRailDestination(
-                              icon: Visibility(
-                                visible: false,
-                                child: Icon(Icons.home),
-                              ),
-                              // ignore: prefer_const_constructors
-                              label: Text(
-                                'Porsche',
-                                style: TextStyle(
-                                    fontSize: 20.sp,
-                                    fontWeight: FontWeight.bold),
-                              )),
-                          NavigationRailDestination(
-                              icon: Visibility(
-                                visible: false,
-                                child: Icon(Icons.home),
-                              ),
-                              // ignore: prefer_const_constructors
-                              label: Text(
-                                'Ford',
-                                style: TextStyle(
-                                    fontSize: 20.sp,
-                                    fontWeight: FontWeight.bold),
-                              )),
-                          NavigationRailDestination(
-                              icon: Visibility(
-                                visible: false,
-                                child: Icon(Icons.home),
-                              ),
-                              // ignore: prefer_const_constructors
-                              label: Text(
-                                'Ferrari',
-                                style: TextStyle(
-                                    fontSize: 20.sp,
-                                    fontWeight: FontWeight.bold),
-                              )),
-                          // NavigationRailDestination(
-                          //     icon: Visibility(
-                          //       visible: false,
-                          //       child: Icon(Icons.home),
-                          //     ),
-                          //     // ignore: prefer_const_constructors
-                          //     label: Text(
-                          //       'Skoda',
-                          //       style: TextStyle(
-                          //           fontSize: 20.sp,
-                          //           fontWeight: FontWeight.bold),
-                          //     )),
-                          // NavigationRailDestination(
-                          //     icon: Visibility(
-                          //       visible: false,
-                          //       child: Icon(Icons.home),
-                          //     ),
-                          //     // ignore: prefer_const_constructors
-                          //     label: Text(
-                          //       'Chevrolet',
-                          //       style: TextStyle(
-                          //           fontSize: 20.sp,
-                          //           fontWeight: FontWeight.bold),
-                          //     )),
-                          // NavigationRailDestination(
-                          //     icon: Visibility(
-                          //       visible: false,
-                          //       child: Icon(Icons.home),
-                          //     ),
-                          //     // ignore: prefer_const_constructors
-                          //     label: Text(
-                          //       'Ford',
-                          //       style: TextStyle(
-                          //           fontSize: 20.sp,
-                          //           fontWeight: FontWeight.bold),
-                          //     )),
-                       
-                        ],
+                      Padding(
+                        padding: EdgeInsets.only(top: 60.h),
+                        child: NavigationRail(
+                          backgroundColor: Color.fromRGBO(245, 245, 245, 0),
+                          selectedIconTheme: IconThemeData(color: Colors.black),
+                          indicatorColor: Colors.black,
+                          labelType: NavigationRailLabelType.all,
+                          selectedIndex: AppCubit.get(context).selectedIndex,
+                          onDestinationSelected: (index) {
+                            AppCubit.get(context).changeNavigationRail(index);
+                          },
+                          // ignore: prefer_const_literals_to_create_immutables
+                          destinations: [
+                            // ignore: prefer_const_constructors
+                            NavigationRailDestination(
+                                icon: Visibility(
+                                  visible: false,
+                                  child: Icon(Icons.home),
+                                ),
+                                // ignore: prefer_const_constructors
+                                label: Text(
+                                  'BMW',
+                                  style: TextStyle(
+                                      fontSize: 20.sp,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                            NavigationRailDestination(
+                                icon: Visibility(
+                                  visible: false,
+                                  child: Icon(Icons.home),
+                                ),
+                                // ignore: prefer_const_constructors
+                                label: Text(
+                                  'Porsche',
+                                  style: TextStyle(
+                                      fontSize: 20.sp,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                            NavigationRailDestination(
+                                icon: Visibility(
+                                  visible: false,
+                                  child: Icon(Icons.home),
+                                ),
+                                // ignore: prefer_const_constructors
+                                label: Text(
+                                  'Ford',
+                                  style: TextStyle(
+                                      fontSize: 20.sp,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                            NavigationRailDestination(
+                                icon: Visibility(
+                                  visible: false,
+                                  child: Icon(Icons.home),
+                                ),
+                                // ignore: prefer_const_constructors
+                                label: Text(
+                                  'Ferrari',
+                                  style: TextStyle(
+                                      fontSize: 20.sp,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                            // NavigationRailDestination(
+                            //     icon: Visibility(
+                            //       visible: false,
+                            //       child: Icon(Icons.home),
+                            //     ),
+                            //     // ignore: prefer_const_constructors
+                            //     label: Text(
+                            //       'Skoda',
+                            //       style: TextStyle(
+                            //           fontSize: 20.sp,
+                            //           fontWeight: FontWeight.bold),
+                            //     )),
+                            // NavigationRailDestination(
+                            //     icon: Visibility(
+                            //       visible: false,
+                            //       child: Icon(Icons.home),
+                            //     ),
+                            //     // ignore: prefer_const_constructors
+                            //     label: Text(
+                            //       'Chevrolet',
+                            //       style: TextStyle(
+                            //           fontSize: 20.sp,
+                            //           fontWeight: FontWeight.bold),
+                            //     )),
+                            // NavigationRailDestination(
+                            //     icon: Visibility(
+                            //       visible: false,
+                            //       child: Icon(Icons.home),
+                            //     ),
+                            //     // ignore: prefer_const_constructors
+                            //     label: Text(
+                            //       'Ford',
+                            //       style: TextStyle(
+                            //           fontSize: 20.sp,
+                            //           fontWeight: FontWeight.bold),
+                            //     )),
+                          ],
+                        ),
                       ),
                       Expanded(
                         child: Column(
@@ -137,7 +139,7 @@ class _CarsLayoutState extends State<CarsLayout> {
                                   children: [
                                     Padding(
                                       padding: EdgeInsets.only(
-                                          left: 20.w, top: 20.h),
+                                          left: 160.w, top: 20.h),
                                       child: Text(
                                         'readyto.',
                                         style: TextStyle(

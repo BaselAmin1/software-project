@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           theme: ThemeData(primarySwatch: Colors.grey),
           debugShowCheckedModeBanner: false,
-          home: CarsLayout(),
+          home: RegisterScreen(),
         );
       },
     );
