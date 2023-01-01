@@ -89,18 +89,18 @@ class _CarsLayoutState extends State<CarsLayout> {
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold),
                                 )),
-                            // NavigationRailDestination(
-                            //     icon: Visibility(
-                            //       visible: false,
-                            //       child: Icon(Icons.home),
-                            //     ),
-                            //     // ignore: prefer_const_constructors
-                            //     label: Text(
-                            //       'Skoda',
-                            //       style: TextStyle(
-                            //           fontSize: 20.sp,
-                            //           fontWeight: FontWeight.bold),
-                            //     )),
+                             NavigationRailDestination(
+                                icon: Visibility(
+                                  visible: false,
+                                   child: Icon(Icons.home),
+                                 ),
+                                 // ignore: prefer_const_constructors
+                                 label: Text(
+                                   'Jeep',
+                                   style: TextStyle(
+                                      fontSize: 20.sp,
+                                       fontWeight: FontWeight.bold),
+                                 )),
                             // NavigationRailDestination(
                             //     icon: Visibility(
                             //       visible: false,
@@ -148,7 +148,7 @@ class _CarsLayoutState extends State<CarsLayout> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 200.w,
+                                      width: 70.w,
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(top: 15.h),

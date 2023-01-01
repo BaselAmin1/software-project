@@ -32,7 +32,15 @@ class CheckOutScreen extends StatelessWidget {
           car = findCar(id, kAllFord);
         } else if (maker == 'DONKEY') {
           car = findCar(id, kAllDonkey);
+
+
         }
+        else if (maker == 'JEEP') {
+          car = findCar(id, kAllJeep);
+
+
+        }
+
         return Scaffold(
           body: Column(
             children: [

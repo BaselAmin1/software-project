@@ -41,7 +41,7 @@ class BuildCars extends StatelessWidget {
             // ignore: prefer_const_constructors
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
-              childAspectRatio: 2 / 1.5,
+              childAspectRatio: 2 / 2,
               crossAxisSpacing: .7,
               mainAxisSpacing: .7,
             ),
@@ -117,8 +117,8 @@ class BuildCars extends StatelessWidget {
                               ),
                               Image.asset(
                                 'assets${car.image}',
-                                width: 270,
-                                height: 170,
+                               // width: 270,
+                                //height: 170,
                               )
                               //!Imageeeere
                             ],

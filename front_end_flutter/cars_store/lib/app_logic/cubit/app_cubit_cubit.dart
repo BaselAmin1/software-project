@@ -40,5 +40,9 @@ class AppCubit extends Cubit<AppCubitStates> {
       create: (context) => CarsCubit(CarsRepository(CarsWebServices())),
       child: FerrarisScreen(),
     ),
+    BlocProvider(
+      create: (context) => CarsCubit(CarsRepository(CarsWebServices())),
+      child: JeeptScreen(),
+    ),
   ];
 }
