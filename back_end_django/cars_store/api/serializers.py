@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Bmw,Porsche,Ferrari,Ford,Donkey
+from .models import Bmw,Porsche,Ferrari,Ford,Donkey,Jeep
 
 class CarSerializer(ModelSerializer):
     class Meta:
@@ -13,6 +13,9 @@ class CarSerializer(ModelSerializer):
         fields = '__all__'
     class Meta:
         model = Ford
+        fields = '__all__'
+    class Meta:
+        model = Jeep
         fields = '__all__'
     class Meta:
         model = Donkey

@@ -10,6 +10,9 @@ urlpatterns =[
     path('bmws/',views.getBmws),
     path('bmw/<pk>/',views.getBmw),
 
+     path('jeeps/',views.getJeeps),
+    path('jeep/<pk>/',views.getJeep),
+
     path('porsches/',views.getPorsches),
     path('porsche/<pk>/',views.getPorsche),
 
