@@ -1,6 +1,8 @@
 import 'package:cars_store/app_logic/cubit/app_cubit_cubit.dart';
 import 'package:cars_store/features/cars/business_logic/cubit/cars_cubit.dart';
 import 'package:cars_store/features/cars/data/models/cars_model.dart';
+import 'package:cars_store/features/cars/data/repository/cars_repository.dart';
+import 'package:cars_store/features/cars/data/web_sevices/cars_web_services.dart';
 import 'package:cars_store/features/cars/presentation/screens/orders_summary_screen.dart';
 import 'package:cars_store/strings.dart';
 import 'package:flutter/material.dart';
@@ -176,7 +178,13 @@ class CheckOutScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => OrderSummary(),
+                              builder: (context) => BlocProvider(
+                                create: (context) => CarsCubit(CarsRepository(CarsWebServices())),
+                                child: OrderSummary(
+                                  maker: car!.maker,
+                                  id: car!.id,
+                                ),
+                              ),
                             ));
                       },
                       child: Text(
