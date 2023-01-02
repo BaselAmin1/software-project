@@ -7,15 +7,47 @@ from .models import Bmw,Ford,Ferrari,Porsche,Donkey,Jeep
 def getRoutes(request):
     routes =[
         {
-            'Endpoint':'/cars/',
+            'Endpoint':'/bmws/',
             'method':'GET',
-            'description':'Returns an array of cars',
+            'description':'Returns an array of bmw cars',
         },
         {
-            'Endpoint':'/cars/id',
+            'Endpoint':'/bmw/id',
             'method':'GET',
-            'description':'Returns details of car',
-        }
+            'description':'Returns details of bmw car',
+        }, {
+            'Endpoint':'/porsches/',
+            'method':'GET',
+            'description':'Returns an array of porsche cars',
+        }, {
+            'Endpoint':'/porsche/id',
+            'method':'GET',
+            'description':'Returns details of porsche car',
+        }, {
+            'Endpoint':'/ferarris/',
+            'method':'GET',
+            'description':'Returns an array of ferrari cars',
+        }, {
+            'Endpoint':'/ferrari/id',
+            'method':'GET',
+            'description':'Returns details of ferrari car',
+        }, {
+            'Endpoint':'/fords/',
+            'method':'GET',
+            'description':'Returns an array of ford cars',
+        }, {
+            'Endpoint':'/ford/id',
+            'method':'GET',
+            'description':'Returns details of ford car',
+        }, {
+            'Endpoint':'/jeeps/',
+            'method':'GET',
+            'description':'Returns an array of jeep cars',
+        }, {
+            'Endpoint':'/jeep/id',
+            'method':'GET',
+            'description':'Returns details of jeep car',
+        }, 
     ]
     return Response(routes)
     
