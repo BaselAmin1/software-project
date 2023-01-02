@@ -132,9 +132,12 @@ class BuildCars extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(
-                          Icons.check_box_outline_blank,
+                        if(car.availabilty==true)Icon(
+                          Icons.check_box_outlined,
+                        )else Icon(
+                          Icons.check_box_outline_blank_sharp,
                         ),
+                        
                         SizedBox(
                           width: 2.w,
                         ),

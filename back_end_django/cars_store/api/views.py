@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import CarSerializer
-from .models import Bmw,Ford,Ferrari,Porsche,Jeep,Donkey
+from .models import Bmw,Ford,Ferrari,Porsche,Donkey,Jeep
 
 @api_view(['GET',])
 def getRoutes(request):
@@ -18,6 +18,7 @@ def getRoutes(request):
         }
     ]
     return Response(routes)
+    
 # @api_view(['POST'])
 # def signup(request):
 #     form=UserCreationForm()
@@ -82,14 +83,14 @@ def getFord(request,pk):
 
 @api_view(['GET'])
 def getJeeps(request):
-    jeep = jeep.objects.all()
+    jeep = Jeep.objects.all()
     serializer = CarSerializer(jeep, many=True)
     return Response(serializer.data)
 
 
 @api_view(['GET'])
 def getJeep(request,pk):
-    jeep = jeep.objects.get(id=pk)
+    jeep = Jeep.objects.get(id=pk)
     serializer = CarSerializer(jeep, many=False)
     return Response(serializer.data)
 

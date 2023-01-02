@@ -32,22 +32,18 @@ class CheckOutScreen extends StatelessWidget {
           car = findCar(id, kAllFord);
         } else if (maker == 'DONKEY') {
           car = findCar(id, kAllDonkey);
-
-
-        }
-        else if (maker == 'JEEP') {
+        } else if (maker == 'JEEP') {
           car = findCar(id, kAllJeep);
-
-
         }
 
         return Scaffold(
           body: Column(
             children: [
               Row(
+                
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: 50.w, top: 70.h),
+                    padding: EdgeInsets.only(left: 30.w, top: 70.h),
                     child: Container(
                       child: Image.asset(
                         'assets${car!.image}',
@@ -68,6 +64,7 @@ class CheckOutScreen extends StatelessWidget {
                           child: Text(
                             car!.maker!,
                             style: TextStyle(
+                              fontWeight: FontWeight.bold,
                               fontSize: 18.sp,
                             ),
                           ),
@@ -174,10 +171,18 @@ class CheckOutScreen extends StatelessWidget {
                 ],
               ),
               Padding(
-                  padding: EdgeInsets.only(left: 215.w, top: 30.h, right: 22.w),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 140, vertical: 80),
+                child: Text(
+                  car!.caption!,
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+                ),
+              ),
+              Padding(
+                  padding: EdgeInsets.only(left: 22.w, top: 150.h, right: 22.w),
                   child: Container(
                     height: 65.h,
-                    width: 342.w,
+                    width: 842.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         color: Color.fromRGBO(31, 41, 55, 1)),
@@ -187,7 +192,8 @@ class CheckOutScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => BlocProvider(
-                                create: (context) => CarsCubit(CarsRepository(CarsWebServices())),
+                                create: (context) => CarsCubit(
+                                    CarsRepository(CarsWebServices())),
                                 child: OrderSummary(
                                   maker: car!.maker,
                                   id: car!.id,

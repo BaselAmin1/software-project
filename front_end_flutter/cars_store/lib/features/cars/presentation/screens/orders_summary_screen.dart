@@ -184,9 +184,9 @@ class OrderSummary extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.only(left: 54.w),
+                                        padding: EdgeInsets.only(left: 30.w),
                                         child: Text(
-                                          '90' + ' \$',
+                                          'Free shipping for first order',
                                           style: TextStyle(fontSize: 18.sp),
                                         ),
                                       ),
