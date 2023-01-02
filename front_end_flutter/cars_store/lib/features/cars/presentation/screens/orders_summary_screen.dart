@@ -184,15 +184,16 @@ class OrderSummary extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.only(left: 30.w),
+                                        padding: EdgeInsets.only(left: 10.w),
                                         child: Text(
                                           'Free shipping for first order',
+                                          
                                           style: TextStyle(fontSize: 18.sp),
                                         ),
                                       ),
                                     ],
                                   ),
-                                  SizedBox(
+                                  SizedBox( 
                                     height: 15.h,
                                   ),
                                   Row(

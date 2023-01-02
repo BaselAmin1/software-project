@@ -179,7 +179,7 @@ class CheckOutScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                  padding: EdgeInsets.only(left: 22.w, top: 150.h, right: 22.w),
+                  padding: EdgeInsets.only(left: 22.w, top: 100.h, right: 22.w),
                   child: Container(
                     height: 65.h,
                     width: 842.w,
